@@ -1,7 +1,7 @@
 import dny
 import tkinter as tk
 from datetime import datetime
-import time
+
 
 window = tk.Tk()
 window.geometry("800x670")
@@ -11,8 +11,6 @@ window.title("Docházka")
 entry_prichody_list = []
 entry_odchody_list = []
 label_rozdil = []
-
-
 
 
 def button_click():
@@ -51,7 +49,7 @@ for i in range(dny.pocet(9)):
     entry_odchody_list.append(entry_odchod)
 
 for i in range(dny.pocet(9)):
-    Label_rozdil = tk.Label(window, text="", bg="black",fg="white")
+    Label_rozdil = tk.Label(window, text="", bg="black", fg="white")
     Label_rozdil.grid(row=i + 1, column=3)
     label_rozdil.append(Label_rozdil)
 
