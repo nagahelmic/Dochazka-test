@@ -24,31 +24,28 @@ def button_click():
         else:
             rozdil["text"] = ""
 
-
+#Datum nadpis
 datum_label = tk.Label(window, text="Datum", bg="black", fg="white")
 datum_label.grid(row=0, column=0)
-
+#Příchod nadpis
 prichod_label = tk.Label(window, text="Příchod", bg="black", fg="white")
 prichod_label.grid(row=0, column=1)
-
+#Odchod nadpis
 odchod_label = tk.Label(window, text="Odchod", bg="black", fg="white")
 odchod_label.grid(row=0, column=2)
-
+#UI-loop
 for day in range(dny.pocet(9)):
     Label_datum = tk.Label(window, text=dny.datumy(9, day), padx=20, bg="black", fg="white")
     Label_datum.grid(row=day + 1, column=0)
-
-for i in range(dny.pocet(9)):
+    #Příchod-entry
     entry_prichod = tk.Entry(window, width=10, justify="right")
     entry_prichod.grid(row=i + 1, column=1, padx=10)
     entry_prichody_list.append(entry_prichod)
-
-for i in range(dny.pocet(9)):
+    #Odchod-entry
     entry_odchod = tk.Entry(window, width=10, justify="right")
     entry_odchod.grid(row=i + 1, column=2, padx=10)
     entry_odchody_list.append(entry_odchod)
-
-for i in range(dny.pocet(9)):
+    #Výpis-rozdílu časů
     Label_rozdil = tk.Label(window, text="", bg="black", fg="white")
     Label_rozdil.grid(row=i + 1, column=3)
     label_rozdil.append(Label_rozdil)
